@@ -1,6 +1,9 @@
 'use client';
 
+import { useScrollAnimation } from '@/hooks/useScrollAnimation';
+
 export default function Skills() {
+  const { ref: containerRef, isInView } = useScrollAnimation();
   const skillCategories = [
     {
       title: 'Languages',
@@ -44,9 +47,9 @@ export default function Skills() {
         </p>
 
         {/* Skills Grid */}
-        <div className="grid md:grid-cols-2 gap-8">
-          {skillCategories.map((category) => (
-            <div key={category.num} className="border border-white/10 p-8 hover:border-[#ff3b0a] transition-all glow-hover">
+        <div className="grid md:grid-cols-2 gap-8" ref={containerRef}>
+          {skillCategories.map((category, idx) => (
+            <div key={category.num} className={`border border-white/10 p-8 hover:border-[#ff3b0a] transition-all glow-hover scroll-fade-in ${isInView ? 'in-view' : ''}`} style={{ animationDelay: `${idx * 0.1}s` }}>
               <div className="flex items-baseline gap-3 mb-6">
                 <span className="text-red-500 font-bold text-lg">{category.num}</span>
                 <h3 className="text-lg font-bold tracking-widest">{category.title}</h3>

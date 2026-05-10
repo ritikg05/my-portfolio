@@ -1,6 +1,9 @@
 'use client';
 
+import { useScrollAnimation } from '@/hooks/useScrollAnimation';
+
 export default function Experience() {
+  const { ref: timelineRef, isInView } = useScrollAnimation();
   const experiences = [
     {
       title: 'Generative AI Intern',
@@ -26,9 +29,9 @@ export default function Experience() {
         </p>
 
         {/* Timeline */}
-        <div className="space-y-8">
+        <div className="space-y-8" ref={timelineRef}>
           {experiences.map((exp, idx) => (
-            <div key={idx} className="relative border-l-2 border-[#ff3b0a] pl-8 pb-8">
+            <div key={idx} className={`relative border-l-2 border-[#ff3b0a] pl-8 pb-8 scroll-fade-left ${isInView ? 'in-view' : ''}`} style={{ animationDelay: `${idx * 0.15}s` }}>
               {/* Timeline dot */}
               <div className="absolute -left-2.5 top-0 w-5 h-5 bg-[#ff3b0a] rounded-full" />
 

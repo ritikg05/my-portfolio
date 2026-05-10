@@ -2,8 +2,10 @@
 
 import { useState } from 'react';
 import { Github, Linkedin, Mail } from 'lucide-react';
+import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 
 export default function Contact() {
+  const { ref: contentRef, isInView } = useScrollAnimation();
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -50,9 +52,9 @@ export default function Contact() {
           For roles, freelance work, or to compare notes on storage engines — send a note. I read everything that lands here.
         </p>
 
-        <div className="grid md:grid-cols-2 gap-16">
+        <div className="grid md:grid-cols-2 gap-16" ref={contentRef}>
           {/* Left - Contact Info */}
-          <div className="space-y-8">
+          <div className={`space-y-8 scroll-fade-left ${isInView ? 'in-view' : ''}`}>
             {/* Email */}
             <div>
               <h3 className="text-sm font-mono tracking-widest font-bold mb-2">EMAIL</h3>
@@ -98,7 +100,7 @@ export default function Contact() {
           </div>
 
           {/* Right - Contact Form */}
-          <div className="border border-white/10 p-8">
+          <div className={`border border-white/10 p-8 scroll-fade-right ${isInView ? 'in-view' : ''}`}>
             <form onSubmit={handleSubmit} className="space-y-4">
               <div>
                 <input
@@ -151,7 +153,7 @@ export default function Contact() {
               <div className="pt-6">
                 <button
                   type="submit"
-                  className="w-full md:w-auto px-6 py-3 bg-[#ff3b0a] text-white font-mono text-sm font-bold tracking-widest hover:bg-[#e63500] transition-colors disabled:opacity-50"
+                  className="w-full md:w-auto px-6 py-3 bg-[#ff3b0a] text-white font-mono text-sm font-bold tracking-widest hover:bg-[#e63500] hover:shadow-[0_0_25px_rgba(255,59,10,0.4)] transition-all hover:-translate-y-0.5 disabled:opacity-50 cta-button"
                   disabled={submitted}
                 >
                   {submitted ? 'SENT ✓' : 'SEND MESSAGE →'}

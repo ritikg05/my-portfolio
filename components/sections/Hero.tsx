@@ -2,8 +2,10 @@
 
 import Image from 'next/image';
 import { ArrowDown } from 'lucide-react';
+import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 
 export default function Hero() {
+  const { ref: contentRef, isInView } = useScrollAnimation({ once: false });
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     element?.scrollIntoView({ behavior: 'smooth' });
@@ -18,9 +20,9 @@ export default function Hero() {
       </div>
 
       <div className="max-w-7xl mx-auto w-full">
-        <div className="grid md:grid-cols-2 gap-12 items-center">
+        <div className="grid md:grid-cols-2 gap-12 items-center" ref={contentRef}>
           {/* Left Content */}
-          <div className="space-y-8">
+          <div className="space-y-8 fade-in-up">
             {/* Badge */}
             <div className="section-label">
               AVAILABLE • INTERNSHIPS & FULL-TIME
@@ -93,8 +95,8 @@ export default function Hero() {
           </div>
 
           {/* Right - Profile Image */}
-          <div className="relative h-96 md:h-full min-h-96 md:min-h-screen flex items-center justify-center">
-            <div className="relative w-64 h-96 md:w-80 md:h-[500px] border border-white/20 overflow-hidden group">
+          <div className="relative h-96 md:h-full min-h-96 md:min-h-screen flex items-center justify-center fade-in-up" style={{ animationDelay: '0.2s' }}>
+            <div className="relative w-64 h-96 md:w-80 md:h-[500px] border border-white/20 overflow-hidden group hover:border-[#ff3b0a] hover:shadow-[0_0_30px_rgba(255,59,10,0.3)] transition-all duration-300">
               <Image
                 src="/profile.jpg"
                 alt="Ritik Gupta"

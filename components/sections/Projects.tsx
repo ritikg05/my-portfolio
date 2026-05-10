@@ -1,6 +1,9 @@
 'use client';
 
+import { useScrollAnimation } from '@/hooks/useScrollAnimation';
+
 export default function Projects() {
+  const { ref: projectsRef, isInView } = useScrollAnimation();
   const projects = [
     {
       num: '01',
@@ -45,9 +48,9 @@ export default function Projects() {
         </div>
 
         {/* Projects Grid */}
-        <div className="grid gap-8">
+        <div className="grid gap-8" ref={projectsRef}>
           {projects.map((project, idx) => (
-            <div key={idx} className="relative border border-white/10 p-8 hover:border-[#ff3b0a] glow-hover transition-all group overflow-hidden">
+            <div key={idx} className={`relative border border-white/10 p-8 hover:border-[#ff3b0a] glow-hover transition-all group overflow-hidden scroll-fade-in ${isInView ? 'in-view' : ''}`} style={{ animationDelay: `${idx * 0.1}s` }}>
               {/* Project Number Background */}
               <div className="project-number">{project.num}</div>
 

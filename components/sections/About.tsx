@@ -1,16 +1,22 @@
 'use client';
 
+import { useScrollAnimation } from '@/hooks/useScrollAnimation';
+
 export default function About() {
+  const { ref: headingRef, isInView: headingInView } = useScrollAnimation();
+  const { ref: statsRef, isInView: statsInView } = useScrollAnimation();
+  const { ref: contentRef, isInView: contentInView } = useScrollAnimation();
+
   return (
     <section id="about" className="py-24 px-4 md:px-8 border-b border-white/10">
       <div className="max-w-7xl mx-auto">
         {/* Section Label */}
-        <div className="section-label mb-8">02 / ABOUT</div>
+        <div className="section-label mb-8 scroll-fade-in in-view">02 / ABOUT</div>
 
         <div className="grid md:grid-cols-2 gap-16 items-start">
           {/* Left - Heading */}
-          <div className="space-y-8">
-            <h2 className="text-6xl md:text-7xl font-black leading-none tracking-tight">
+          <div className="space-y-8" ref={headingRef}>
+            <h2 className={`text-6xl md:text-7xl font-black leading-none tracking-tight scroll-fade-left ${headingInView ? 'in-view' : ''}`}>
               THE
               <br />
               ENGINEER
@@ -24,20 +30,20 @@ export default function About() {
             </div>
 
             {/* Stats */}
-            <div className="grid grid-cols-2 gap-4">
-              <div className="border border-white/10 p-4 hover:border-[#ff3b0a] transition-colors">
+            <div className="grid grid-cols-2 gap-4" ref={statsRef}>
+              <div className={`border border-white/10 p-4 hover:border-[#ff3b0a] transition-all scroll-scale ${statsInView ? 'in-view' : ''}`}>
                 <div className="text-xs font-mono text-gray-500 mb-1">1500+</div>
                 <div className="text-sm font-bold">LEETCODE</div>
               </div>
-              <div className="border border-white/10 p-4 hover:border-[#ff3b0a] transition-colors">
+              <div className={`border border-white/10 p-4 hover:border-[#ff3b0a] transition-all scroll-scale ${statsInView ? 'in-view' : ''}`} style={{ animationDelay: '0.1s' }}>
                 <div className="text-xs font-mono text-gray-500 mb-1">300+</div>
                 <div className="text-sm font-bold">CODECHEF</div>
               </div>
-              <div className="border border-white/10 p-4 hover:border-[#ff3b0a] transition-colors">
+              <div className={`border border-white/10 p-4 hover:border-[#ff3b0a] transition-all scroll-scale ${statsInView ? 'in-view' : ''}`} style={{ animationDelay: '0.2s' }}>
                 <div className="text-xs font-mono text-gray-500 mb-1">IBM</div>
                 <div className="text-sm font-bold">GEN-AI INTERN</div>
               </div>
-              <div className="border border-white/10 p-4 hover:border-[#ff3b0a] transition-colors">
+              <div className={`border border-white/10 p-4 hover:border-[#ff3b0a] transition-all scroll-scale ${statsInView ? 'in-view' : ''}`} style={{ animationDelay: '0.3s' }}>
                 <div className="text-xs font-mono text-gray-500 mb-1">B.TECH</div>
                 <div className="text-sm font-bold">DATA SCIENCE</div>
               </div>
@@ -45,12 +51,12 @@ export default function About() {
           </div>
 
           {/* Right - Content */}
-          <div className="space-y-8">
-            <p className="text-base text-gray-400 leading-relaxed">
+          <div className="space-y-8" ref={contentRef}>
+            <p className={`text-base text-gray-400 leading-relaxed scroll-fade-in ${contentInView ? 'in-view' : ''}`}>
               I&apos;m a B.Tech Data Science student and Full-Stack Developer with experience in AI, MERN Stack, and Cloud technologies. I build modern web applications, AI-powered tools, and data-driven solutions.
             </p>
 
-            <p className="text-base text-gray-400 leading-relaxed">
+            <p className={`text-base text-gray-400 leading-relaxed scroll-fade-in ${contentInView ? 'in-view' : ''}`} style={{ animationDelay: '0.1s' }}>
               I completed an internship at IBM where I worked on Generative AI using Python and PyTorch. I&apos;ve also developed multiple academic and personal projects involving AI, data visualization, authentication systems, and intelligent recommendation systems.
             </p>
 
