@@ -99,7 +99,7 @@ export default function Hero() {
           <div className="relative h-96 md:h-full min-h-96 md:min-h-screen flex items-center justify-center fade-in-up" style={{ animationDelay: '0.2s' }}>
             <div className="relative w-64 h-96 md:w-80 md:h-[500px] border border-white/20 overflow-hidden group hover:border-[#ff3b0a] hover:shadow-[0_0_30px_rgba(255,59,10,0.3)] transition-all duration-300">
               <Image
-                src="/profile.jpg"
+                src="/profile.jpg.png"
                 alt="Ritik Gupta"
                 fill
                 className="object-cover group-hover:scale-105 transition-transform duration-300"
