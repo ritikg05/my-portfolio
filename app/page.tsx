@@ -23,24 +23,12 @@ export default function Home() {
     <main className="bg-black grid-overlay min-h-screen">
       <Navbar />
       <Hero />
-      <div className="section-overlap">
-        <About />
-      </div>
-      <div className="section-overlap">
-        <Skills />
-      </div>
-      <div className="section-overlap">
-        <Experience />
-      </div>
-      <div className="section-overlap">
-        <Projects />
-      </div>
-      <div className="section-overlap">
-        <Education />
-      </div>
-      <div className="section-overlap">
-        <Contact />
-      </div>
+      <About />
+      <Skills />
+      <Experience />
+      <Projects />
+      <Education />
+      <Contact />
       <Footer />
     </main>
   );
