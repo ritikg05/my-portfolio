@@ -10,13 +10,11 @@ export default function About() {
         <div className="grid md:grid-cols-2 gap-16 items-start">
           {/* Left - Heading */}
           <div className="space-y-8">
-            <h2 className="section-heading">
+            <h2 className="text-6xl md:text-7xl font-black leading-none tracking-tight">
               THE
               <br />
               ENGINEER
-              <span className="inline-block ml-3">
-                <div className="accent-square" />
-              </span>
+              <span className="text-gray-700">.</span>
             </h2>
 
             {/* Status & Focus */}

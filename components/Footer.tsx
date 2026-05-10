@@ -48,10 +48,16 @@ export default function Footer() {
         </div>
 
         {/* Divider */}
-        <div className="border-t border-white/10 pt-8">
-          <p className="text-xs font-mono text-gray-600 text-center">
+        <div className="border-t border-white/10 pt-8 flex items-center justify-between">
+          <p className="text-xs font-mono text-gray-600">
             © 2026 RITIK GUPTA. ALL RIGHTS RESERVED.
           </p>
+          <button
+            onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+            className="text-xs font-mono text-gray-600 hover:text-[#ff3b0a] transition-colors"
+          >
+            Back to top ↑
+          </button>
         </div>
       </div>
     </footer>

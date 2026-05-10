@@ -16,7 +16,7 @@ export default function Education() {
         <div className="section-label mb-8">06 / SCHOOLING</div>
 
         {/* Heading */}
-        <h2 className="section-heading mb-8">EDU-RECORD</h2>
+        <h2 className="text-6xl md:text-7xl font-black leading-none tracking-tight mb-8">EDU·RECORD</h2>
 
         <div className="grid md:grid-cols-2 gap-12 items-start">
           {/* Left */}

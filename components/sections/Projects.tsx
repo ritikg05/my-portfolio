@@ -36,7 +36,7 @@ export default function Projects() {
 
         <div className="grid md:grid-cols-2 gap-12 items-start mb-16">
           {/* Heading */}
-          <h2 className="section-heading">PROJECTS.</h2>
+          <h2 className="text-6xl md:text-7xl font-black leading-none tracking-tight">PROJECTS.</h2>
 
           {/* Description */}
           <p className="text-base text-gray-400 leading-relaxed">

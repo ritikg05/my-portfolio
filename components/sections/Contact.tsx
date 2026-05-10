@@ -39,7 +39,7 @@ export default function Contact() {
         <div className="section-label mb-8">07 / GET IN TOUCH</div>
 
         {/* Heading */}
-        <h2 className="section-heading mb-8">
+        <h2 className="text-6xl md:text-7xl font-black leading-none tracking-tight mb-8">
           LET&apos;S
           <br />
           BUILD.

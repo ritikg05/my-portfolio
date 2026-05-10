@@ -30,18 +30,17 @@ export default function Hero() {
             <div className="section-label">01 / PORTFOLIO</div>
 
             {/* Main Heading */}
-            <div className="space-y-4">
-              <div className="section-heading">
+            <div className="space-y-0">
+              <h1 className="text-6xl md:text-8xl font-black leading-none tracking-tight">
                 FULL-STACK
-                <br />
-                <span className="flex items-center gap-3">
-                  + AI
-                  <div className="accent-square" />
-                </span>
-              </div>
-              <div className="text-5xl md:text-6xl font-black text-gray-600">
+              </h1>
+              <h1 className="text-6xl md:text-8xl font-black leading-none tracking-tight">
+                <span className="text-[#ff3b0a]">+ AI</span>
+                <span className="text-gray-700">.</span>
+              </h1>
+              <h1 className="text-6xl md:text-8xl font-black leading-none tracking-tight text-gray-700">
                 BUILT TO SHIP.
-              </div>
+              </h1>
             </div>
 
             {/* Description */}

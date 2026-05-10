@@ -36,7 +36,7 @@ export default function Skills() {
         <div className="section-label mb-8">03 / CAPABILITIES</div>
 
         {/* Heading */}
-        <h2 className="section-heading mb-4">STACK-SHEET</h2>
+        <h2 className="text-6xl md:text-7xl font-black leading-none tracking-tight mb-4">STACK·SHEET</h2>
 
         {/* Subtitle */}
         <p className="text-sm font-mono text-gray-500 mb-16 tracking-widest">

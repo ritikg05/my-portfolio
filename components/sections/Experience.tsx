@@ -18,7 +18,7 @@ export default function Experience() {
         <div className="section-label mb-8">04 / TRAJECTORY</div>
 
         {/* Heading */}
-        <h2 className="section-heading mb-4">TIME-LINE</h2>
+        <h2 className="text-6xl md:text-7xl font-black leading-none tracking-tight mb-4">TIME·LINE</h2>
 
         {/* Description */}
         <p className="text-sm text-gray-400 mb-16">
