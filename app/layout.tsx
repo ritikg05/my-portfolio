@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { Geist, Geist_Mono } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
+import { CinematicScrollProvider } from '@/components/CinematicScroll'
 import './globals.css'
 
 const _geist = Geist({ subsets: ["latin"] });
@@ -37,7 +38,9 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth dark bg-black">
       <body className="font-sans antialiased bg-black text-white overflow-x-hidden">
-        {children}
+        <CinematicScrollProvider>
+          {children}
+        </CinematicScrollProvider>
         {process.env.NODE_ENV === 'production' && <Analytics />}
       </body>
     </html>

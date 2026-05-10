@@ -2,17 +2,18 @@
 
 import Image from 'next/image';
 import { ArrowDown } from 'lucide-react';
-import { useScrollAnimation } from '@/hooks/useScrollAnimation';
+import { useScrollAnimation, useParallaxGrid } from '@/hooks/useScrollAnimation';
 
 export default function Hero() {
   const { ref: contentRef, isInView } = useScrollAnimation({ once: false });
+  const parallaxRef = useParallaxGrid(0.3);
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     element?.scrollIntoView({ behavior: 'smooth' });
   };
 
   return (
-    <section className="relative min-h-screen flex items-center py-20 px-4 md:px-8 border-b border-white/10 overflow-hidden">
+    <section className="relative min-h-screen flex items-center py-20 px-4 md:px-8 border-b border-white/10 overflow-hidden grid-parallax" ref={parallaxRef}>
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-10 right-10 text-xs font-mono text-gray-600">
           GITHUB.COM/RITIKG05

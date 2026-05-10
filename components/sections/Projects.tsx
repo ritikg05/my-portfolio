@@ -50,7 +50,7 @@ export default function Projects() {
         {/* Projects Grid */}
         <div className="grid gap-8" ref={projectsRef}>
           {projects.map((project, idx) => (
-            <div key={idx} className={`relative border border-white/10 p-8 hover:border-[#ff3b0a] glow-hover transition-all group overflow-hidden scroll-fade-in ${isInView ? 'in-view' : ''}`} style={{ animationDelay: `${idx * 0.1}s` }}>
+            <div key={idx} className={`relative border border-white/10 p-8 hover:border-[#ff3b0a] glow-hover transition-all group overflow-hidden scroll-fade-in card-lift ${isInView ? 'in-view' : ''}`} style={{ animationDelay: `${idx * 0.1}s` }}>
               {/* Project Number Background */}
               <div className="project-number">{project.num}</div>
 
