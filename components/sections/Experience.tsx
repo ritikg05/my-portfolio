@@ -8,10 +8,27 @@ export default function Experience() {
     {
       title: 'Generative AI Intern',
       company: 'IBM',
-      description: 'Worked on Generative AI using Python and PyTorch.',
-      tags: ['PYTHON', 'PYTORCH', 'GENERATIVE AI'],
-      period: '2024'
-    }
+      description:
+        'Worked on Generative AI using Python and PyTorch. Explored Large Language Models (LLMs), AI workflows, and intelligent system development while building AI-powered solutions.',
+      tags: ['PYTHON', 'PYTORCH', 'GENERATIVE AI', 'LLMs'],
+      period: 'JUNE 2025 — JULY 2025',
+    },
+    {
+      title: 'Fintech Intern',
+      company: 'Bluestock Fintech',
+      description:
+        'Worked on fintech-related projects, improving technical and problem-solving skills while gaining experience in modern web technologies and financial platforms.',
+      tags: ['FINTECH', 'WEB DEVELOPMENT', 'JAVASCRIPT'],
+      period: '2025',
+    },
+    {
+      title: 'Web Development Intern',
+      company: 'Zidio Development',
+      description:
+        'Worked on frontend and backend development projects, building responsive interfaces and improving application functionality using modern development tools.',
+      tags: ['REACT', 'NODE.JS', 'FULL-STACK'],
+      period: '2025',
+    },
   ];
 
   return (

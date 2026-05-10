@@ -80,7 +80,7 @@ export default function Contact() {
                   GITHUB
                 </a>
                 <a
-                  href="https://linkedin.com"
+                  href="https://www.linkedin.com/in/ritik-gupta-21145625a/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-2 text-sm text-gray-400 hover:text-[#ff3b0a] transition-colors"

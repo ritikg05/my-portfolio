@@ -59,7 +59,7 @@ export default function Hero() {
               </div>
               <div className="space-y-1">
                 <div className="text-xs font-mono text-gray-500">04+</div>
-                <div className="text-sm font-bold">SHIPPED PROJECTS</div>
+                <div className="text-sm font-bold">PROJECTS</div>
               </div>
               <div className="space-y-1">
                 <div className="text-xs font-mono text-gray-500">1500+</div>
