@@ -342,6 +342,14 @@
     top: 0;
   }
 
+  /* Section overlap effect */
+  .section-overlap {
+    margin-top: -100px;
+    padding-top: 100px;
+    position: relative;
+    z-index: 1;
+  }
+
   /* Premium scroll reveal */
   @keyframes premiumReveal {
     from {

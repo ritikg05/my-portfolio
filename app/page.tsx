@@ -10,6 +10,8 @@ import Projects from '@/components/sections/Projects';
 import Education from '@/components/sections/Education';
 import Contact from '@/components/sections/Contact';
 import Footer from '@/components/Footer';
+import { ScrollReveal } from '@/components/CinematicScroll';
+
 export default function Home() {
   const [scrollY, setScrollY] = useState(0);
 
@@ -23,12 +25,36 @@ export default function Home() {
     <main className="bg-black grid-overlay min-h-screen">
       <Navbar />
       <Hero />
-      <About />
-      <Skills />
-      <Experience />
-      <Projects />
-      <Education />
-      <Contact />
+      <div className="section-overlap">
+        <ScrollReveal delay={100}>
+          <About />
+        </ScrollReveal>
+      </div>
+      <div className="section-overlap">
+        <ScrollReveal delay={100}>
+          <Skills />
+        </ScrollReveal>
+      </div>
+      <div className="section-overlap">
+        <ScrollReveal delay={100}>
+          <Experience />
+        </ScrollReveal>
+      </div>
+      <div className="section-overlap">
+        <ScrollReveal delay={100}>
+          <Projects />
+        </ScrollReveal>
+      </div>
+      <div className="section-overlap">
+        <ScrollReveal delay={100}>
+          <Education />
+        </ScrollReveal>
+      </div>
+      <div className="section-overlap">
+        <ScrollReveal delay={100}>
+          <Contact />
+        </ScrollReveal>
+      </div>
       <Footer />
     </main>
   );
