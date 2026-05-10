@@ -14,9 +14,9 @@ export default function Navbar() {
 
   const navItems = [
     { num: '01', label: 'ABOUT', id: 'about' },
-    { num: '02', label: 'SKILLS', id: 'skills' },
-    { num: '03', label: 'EXPERIENCE', id: 'experience' },
-    { num: '04', label: 'WORK', id: 'projects' },
+    { num: '02', label: 'EXPERIENCE', id: 'experience' },
+    { num: '03', label: 'WORK', id: 'projects' },
+    { num: '04', label: 'SKILLS', id: 'skills' },
     { num: '05', label: 'EDUCATION', id: 'education' },
     { num: '06', label: 'CONTACT', id: 'contact' },
   ];
