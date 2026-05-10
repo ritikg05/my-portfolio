@@ -51,7 +51,7 @@ export default function Navbar() {
           {/* Resume Button */}
           <div className="hidden md:flex">
             <a
-              href="https://github.com/ritikg05"
+              href="https://drive.google.com/file/d/1Gli4gTgkh4Gk5D0DjEjQXlGTB3061Kd-/view?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
               className="px-4 py-2 border border-white/30 text-xs font-mono tracking-widest hover:border-[#ff3b0a] hover:text-[#ff3b0a] transition-all"
