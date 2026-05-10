@@ -32,17 +32,17 @@ export default function Home() {
       </div>
       <div className="section-overlap">
         <ScrollReveal delay={100}>
-          <Skills />
-        </ScrollReveal>
-      </div>
-      <div className="section-overlap">
-        <ScrollReveal delay={100}>
           <Experience />
         </ScrollReveal>
       </div>
       <div className="section-overlap">
         <ScrollReveal delay={100}>
           <Projects />
+        </ScrollReveal>
+      </div>
+      <div className="section-overlap">
+        <ScrollReveal delay={100}>
+          <Skills />
         </ScrollReveal>
       </div>
       <div className="section-overlap">
